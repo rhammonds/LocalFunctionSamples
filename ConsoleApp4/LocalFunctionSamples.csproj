@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>LocalFunctionSamples</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="10-LocalFunctionsTasks.cs" />
+    <Compile Remove="2-LocalFunctionsExprBody.cs" />
+    <Compile Remove="3-LocalFunctionsSantitize.cs" />
+    <Compile Remove="4-LocalFunctionsIteratorNotLocal.cs" />
+    <Compile Remove="5-LocalFunctionsIterator.cs" />
+    <Compile Remove="6a-LocalFunctionsLinqNotLocal.cs" />
+    <Compile Remove="6b-LocalFunctionsLinq.cs" />
+    <Compile Remove="7-LocalFunctionsRecursion.cs" />
+    <Compile Remove="8-LocalFunctionVarCapture.cs" />
+    <Compile Remove="9-LocalFunctionsVsLambdas.cs" />
+    <Compile Remove="GlobalUsings.cs" />
+    <Compile Remove="ModuleInitializer1.cs" />
+    <Compile Remove="Patterns1.cs" />
+    <Compile Remove="TupleType1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="10-LocalFunctionsTasks.cs" />
+    <None Include="2-LocalFunctionsExprBody.cs" />
+    <None Include="4-LocalFunctionsIteratorNotLocal.cs" />
+    <None Include="5-LocalFunctionsIterator.cs" />
+    <None Include="6a-LocalFunctionsLinqNotLocal.cs" />
+    <None Include="6b-LocalFunctionsLinq.cs" />
+    <None Include="7-LocalFunctionsRecursion.cs" />
+    <None Include="8-LocalFunctionVarCapture.cs" />
+    <None Include="9-LocalFunctionsVsLambdas.cs" />
+    <None Include="GlobalUsings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="ModuleInitializer1.cs" />
+    <None Include="Patterns1.cs" />
+    <None Include="3-LocalFunctionsSantitize.cs" />
+    <None Include="TupleType1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+</Project>
