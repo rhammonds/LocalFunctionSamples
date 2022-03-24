@@ -16,7 +16,7 @@ class Program
         Console.WriteLine("Awaiting Task");
         try
         {
-            result = await task;
+            result = await task; //## Errors on task
         }
         catch (Exception ex)
         {
@@ -27,7 +27,7 @@ class Program
         try
         {
             Console.WriteLine("Calling task CombineTextLocalFunction()");
-            task = CombineTextLocalFunction(null, null);
+            task = CombineTextLocalFunction(null, null); //## Errors on call to method
         }
         catch (Exception ex)
         {

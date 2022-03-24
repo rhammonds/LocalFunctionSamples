@@ -18,11 +18,9 @@ namespace LocalFunctionSamples
             static string Reverse(string s)
             {
                 if (s.Length == 1) return s;
-                return Reverse(s.Substring(1)) + s[0]; //range operator
+                return Reverse(s.Substring(1)) + s[0];  
             }
         }
 
     }
-
-
 }

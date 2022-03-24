@@ -8,7 +8,7 @@ namespace LocalFunctionSamples
 {
     class Program
     {
-        public static void main()
+        public static void Main()
         {
             var orders = GetOrders(true, true, true);
             Console.ReadKey();

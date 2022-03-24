@@ -5,24 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LocalFunctionSamples
-{
-    //Not using local functions
+{   
     class Program
     {
         public static void Main()
         {
-            IEnumerable<int> oddNumbers = OddNumbers(50, 110);
-            Console.WriteLine("Retrieved enumerator...");
-
-            foreach (var i in oddNumbers)  //Error thrown in this loop
+            try
             {
-                Console.Write($"{i} ");
+                var oddNumbers = GetOddNumbers(50, 110);
+                Console.WriteLine("Retrieved enumerator...");
+
+                foreach (var i in oddNumbers)  //Error thrown in this loop
+                {
+                    Console.Write($"{i} ");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
             }
             Console.ReadKey();
         }
 
-        //Get odd numbers in sequence
-        public static IEnumerable<int> OddNumbers(int start, int end)
+        public static IEnumerable<int> GetOddNumbers(int start, int end)
         {
             if (start < 0 || start > 99)
                 throw new ArgumentOutOfRangeException(nameof(start), "start must be between 0 and 99.");

@@ -10,21 +10,28 @@ namespace LocalFunctionSamples
     {
         public static void Main()
         {
-            IEnumerable<int> oddNumbers = OddNumbers(50, 110);  
-            Console.WriteLine("Retrieved enumerator...");
-
-            foreach (var x in oddNumbers)
+            try
             {
-                Console.Write($"{x} ");
+                var oddNumbers = GetOddNumbers(50, 110);//error thrown here
+                Console.WriteLine("Retrieved enumerator...");
+
+                foreach (var x in oddNumbers)
+                {
+                    Console.Write($"{x} ");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
             }
             Console.ReadKey();
         }
 
-        public static IEnumerable<int> OddNumbers(int start, int end)
+        public static IEnumerable<int> GetOddNumbers(int start, int end)
         {
             if (start < 0 || start > 99)
                 throw new ArgumentOutOfRangeException(nameof(start), "start must be between 0 and 99.");
-            if (end > 100)//error thrown here
+            if (end > 100)
                 throw new ArgumentOutOfRangeException(nameof(end), "end must be less than or equal to 100.");
             if (start >= end)
                 throw new ArgumentException("start must be less than end.");

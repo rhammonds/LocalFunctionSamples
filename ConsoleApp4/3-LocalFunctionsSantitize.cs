@@ -10,13 +10,7 @@ namespace LocalFunctionSamples
     {
         public static void Main()
         {
-            IEnumerable<int> oddNumbers = OddNumbers(50, 110);
-            Console.WriteLine("Retrieved enumerator...");
-
-            foreach (var x in oddNumbers)
-            {
-                Console.Write($"{x} ");
-            }
+          var oddNumbers = OddNumbers(50, 110);
             Console.ReadKey();
         }
 

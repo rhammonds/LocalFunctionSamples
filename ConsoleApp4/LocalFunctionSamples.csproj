@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="1-LocalFunction.cs" />
     <Compile Remove="10-LocalFunctionsTasks.cs" />
     <Compile Remove="2-LocalFunctionsExprBody.cs" />
     <Compile Remove="3-LocalFunctionsSantitize.cs" />
     <Compile Remove="4-LocalFunctionsIteratorNotLocal.cs" />
     <Compile Remove="5-LocalFunctionsIterator.cs" />
     <Compile Remove="6a-LocalFunctionsLinqNotLocal.cs" />
-    <Compile Remove="6b-LocalFunctionsLinq.cs" />
     <Compile Remove="7-LocalFunctionsRecursion.cs" />
     <Compile Remove="8-LocalFunctionVarCapture.cs" />
     <Compile Remove="9-LocalFunctionsVsLambdas.cs" />
@@ -24,12 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="1-LocalFunction.cs" />
     <None Include="10-LocalFunctionsTasks.cs" />
     <None Include="2-LocalFunctionsExprBody.cs" />
     <None Include="4-LocalFunctionsIteratorNotLocal.cs" />
     <None Include="5-LocalFunctionsIterator.cs" />
     <None Include="6a-LocalFunctionsLinqNotLocal.cs" />
-    <None Include="6b-LocalFunctionsLinq.cs" />
     <None Include="7-LocalFunctionsRecursion.cs" />
     <None Include="8-LocalFunctionVarCapture.cs" />
     <None Include="9-LocalFunctionsVsLambdas.cs" />
