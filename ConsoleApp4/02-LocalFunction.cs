@@ -24,35 +24,39 @@ namespace LocalFunctionSamples
             {
                 var result = await getDogService().GetDogFacts(1);
                 var dog = JsonConvert.DeserializeObject<Dog>(result); ;
-                Console.WriteLine(result);
-                Console.ReadKey();
+                dog.Facts.ForEach(f => Console.WriteLine($"Interesting Dog Fact: {f}"));
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error Occured");
-            }                      
+                Console.WriteLine($"Error Occured: {ex.Message}");
+            }
+            Console.ReadKey();
 
-            DogFactsApi getDogService()
+            IDogFactsApi getDogService()
             {
                 using var serviceScope = getHost().Services.CreateScope();
                 var services = serviceScope.ServiceProvider;
-                var service = services.GetRequiredService<DogFactsApi>();
+                var service = services.GetRequiredService<IDogFactsApi>();
                 return service;
+            
+                IHost getHost() =>
+                (
+                    new HostBuilder()
+                        .ConfigureServices((hostContext, services) =>
+                        {
+                            services.AddHttpClient();
+                            services.AddTransient<IDogFactsApi, DogFactsApi>();
+                        }).UseConsoleLifetime()
+                ).Build();
             }
-
-            IHost getHost() =>
-            (
-                new HostBuilder()
-                    .ConfigureServices((hostContext, services) =>
-                    {
-                        services.AddHttpClient();
-                        services.AddTransient<DogFactsApi>();
-                    }).UseConsoleLifetime()).Build();
         }
+    }   
+
+    public interface IDogFactsApi
+    {
+        public Task<string> GetDogFacts(int numberId);
     }
-
-
-    public class DogFactsApi
+    public class DogFactsApi: IDogFactsApi
     {
         private IHttpClientFactory _httpFactory { get; set; }
         public DogFactsApi(IHttpClientFactory httpFactory)

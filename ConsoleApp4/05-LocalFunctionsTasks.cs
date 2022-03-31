@@ -24,6 +24,8 @@ class Program
         }
 
         Console.WriteLine();
+
+        //Using local function
         try
         {
             Console.WriteLine("Calling task CombineTextLocalFunction()");
@@ -33,6 +35,8 @@ class Program
         {
             Console.WriteLine($"Error occured *** calling method ***: {ex.Message}");
         }
+
+        //Verify task was not awaited.
         if (task.Exception is null)
         {
             Console.WriteLine("Awaiting Task");
@@ -68,7 +72,7 @@ class Program
 
         return GetAllTextAsync();
 
-        async Task<string> GetAllTextAsync()
+        async Task<string> GetAllTextAsync()  //local function with asyn
         {
             string result = null;
             await Task.Run(() => result = $"{a} {b}");

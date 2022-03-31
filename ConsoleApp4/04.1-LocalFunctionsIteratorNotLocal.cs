@@ -13,7 +13,7 @@ namespace LocalFunctionSamples
             try
             {
                 var oddNumbers = GetOddNumbers(50, 110);
-                Console.WriteLine("Retrieved enumerator...");
+                Console.WriteLine("Retrieved enumerator...");//Enumerator will be retrieved even though error
 
                 foreach (var i in oddNumbers)  //Error thrown in this loop
                 {

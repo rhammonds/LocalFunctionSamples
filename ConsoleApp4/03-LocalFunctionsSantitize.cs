@@ -10,11 +10,20 @@ namespace LocalFunctionSamples
     {
         public static void Main()
         {
-          var oddNumbers = OddNumbers(50, 110);
+            try
+            {
+                var oddNumbers = GetOddNumbers(50, 110);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                throw;
+            }
+            
             Console.ReadKey();
         }
 
-        public static IEnumerable<int> OddNumbers(int start, int end)
+        public static IEnumerable<int> GetOddNumbers(int start, int end)
         {
             Validate();
             return GetOddSequenceEnumerator();

@@ -15,10 +15,10 @@ namespace LocalFunctionSamples
             Console.WriteLine(Reverse(Reverse(numbers)));
             Console.ReadKey();
 
-            static string Reverse(string s)
-            {
+            static string Reverse(string s) //note static
+            { 
                 if (s.Length == 1) return s;
-                return Reverse(s.Substring(1)) + s[0];  
+                return Reverse(s.Substring(1)) + s[0];
             }
         }
 

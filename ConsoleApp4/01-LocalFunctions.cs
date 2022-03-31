@@ -19,13 +19,15 @@ namespace LocalFunctionSamples
     {
         public void PrintCalculations(int a1, int a2)
         {
-            
-            Console.WriteLine("Difference is {0}", GetSum());
-            Console.WriteLine("Difference is {0}", GetDifference());
+            Console.WriteLine($"Sum of {a1} and {a2} is { GetSum()}");
+            Console.WriteLine($"Difference of {a1} and {a2} is {GetDifference()}");
             Console.ReadKey();
      
-            int GetSum() =>  a1 + a2; //expression body
-            int GetDifference()=> a2 - a1;
+            int GetSum() =>  a1 + a2;
+            int GetDifference()
+            {
+                return a2 - a1;
+            }
         }
     }
 }

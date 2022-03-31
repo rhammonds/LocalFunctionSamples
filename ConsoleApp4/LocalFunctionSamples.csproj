@@ -7,40 +7,35 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="1-LocalFunction.cs" />
-    <Compile Remove="10-LocalFunctionsTasks.cs" />
-    <Compile Remove="2-LocalFunctionsExprBody.cs" />
-    <Compile Remove="3-LocalFunctionsSantitize.cs" />
-    <Compile Remove="4-LocalFunctionsIteratorNotLocal.cs" />
-    <Compile Remove="5-LocalFunctionsIterator.cs" />
-    <Compile Remove="6a-LocalFunctionsLinqNotLocal.cs" />
-    <Compile Remove="7-LocalFunctionsRecursion.cs" />
-    <Compile Remove="8-LocalFunctionVarCapture.cs" />
-    <Compile Remove="9-LocalFunctionsVsLambdas.cs" />
-    <Compile Remove="GlobalUsings.cs" />
-    <Compile Remove="ModuleInitializer1.cs" />
-    <Compile Remove="Patterns1.cs" />
-    <Compile Remove="TupleType1.cs" />
+    <Compile Remove="01-LocalFunctions.cs" />
+    <Compile Remove="02-LocalFunction.cs" />
+    <Compile Remove="03-LocalFunctionsSantitize.cs" />
+    <Compile Remove="04.1-LocalFunctionsIteratorNotLocal.cs" />
+    <Compile Remove="04.2-LocalFunctionsIterator.cs" />
+    <Compile Remove="05-LocalFunctionsTasks.cs" />
+    <Compile Remove="06.1-LocalFunctionsLinq.cs" />
+    <Compile Remove="06.2-LocalFunctionsLinqExpressions.cs" />
+    <Compile Remove="07-LocalFunctionsRecursion.cs" />
+    <Compile Remove="08-LocalFunctionVarCapture.cs" />
+    <Compile Remove="09-LocalFunctionsVsLambdas.cs" />
+    <Compile Remove="11-LocalFunctionAttribute.cs" />
+    <Compile Remove="12.1-LocalFunctionFuncMethods.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="1-LocalFunction.cs" />
-    <None Include="10-LocalFunctionsTasks.cs" />
-    <None Include="2-LocalFunctionsExprBody.cs" />
-    <None Include="4-LocalFunctionsIteratorNotLocal.cs" />
-    <None Include="5-LocalFunctionsIterator.cs" />
-    <None Include="6a-LocalFunctionsLinqNotLocal.cs" />
-    <None Include="7-LocalFunctionsRecursion.cs" />
-    <None Include="8-LocalFunctionVarCapture.cs" />
-    <None Include="9-LocalFunctionsVsLambdas.cs" />
-    <None Include="GlobalUsings.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="ModuleInitializer1.cs" />
-    <None Include="Patterns1.cs" />
-    <None Include="3-LocalFunctionsSantitize.cs" />
-    <None Include="TupleType1.cs" />
+    <None Include="02-LocalFunction.cs" />
+    <None Include="03-LocalFunctionsSantitize.cs" />
+    <None Include="04.1-LocalFunctionsIteratorNotLocal.cs" />
+    <None Include="04.2-LocalFunctionsIterator.cs" />
+    <None Include="01-LocalFunctions.cs" />
+    <None Include="05-LocalFunctionsTasks.cs" />
+    <None Include="06.1-LocalFunctionsLinq.cs" />
+    <None Include="06.2-LocalFunctionsLinqExpressions.cs" />
+    <None Include="07-LocalFunctionsRecursion.cs" />
+    <None Include="08-LocalFunctionVarCapture.cs" />
+    <None Include="09-LocalFunctionsVsLambdas.cs" />
+    <None Include="11-LocalFunctionAttribute.cs" />
+    <None Include="12.1-LocalFunctionFuncMethods.cs" />
   </ItemGroup>
 
   <ItemGroup>
