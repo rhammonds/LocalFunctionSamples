@@ -12,13 +12,12 @@ namespace LocalFunctionSamples
     {
         static void Main(string[] args)
         {
-            Message();
+            DebugLogic();
             ReleaseLogic();
-
- 
+             
             //C# 9 attributes on local functions
             [Conditional("DEBUG")] 
-            static void Message()
+            static void DebugLogic()
             {
                 Console.WriteLine("Debug Mode");
             }

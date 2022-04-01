@@ -50,7 +50,38 @@ namespace LocalFunctionSamples
                 ).Build();
             }
         }
-    }   
+
+        static async Task ProcessNotLocal()
+        {
+            try
+            {
+                //Setup
+                var host = (
+                    new HostBuilder()
+                        .ConfigureServices((hostContext, services) =>
+                        {
+                            services.AddHttpClient();
+                            services.AddTransient<IDogFactsApi, DogFactsApi>();
+                        }).UseConsoleLifetime()
+                ).Build();
+                using var serviceScope = host.Services.CreateScope();
+                var services = serviceScope.ServiceProvider;
+                var service = services.GetRequiredService<IDogFactsApi>();
+
+                //Call
+                var result = await service.GetDogFacts(1);
+                var dog = JsonConvert.DeserializeObject<Dog>(result); ;
+                dog.Facts.ForEach(f => Console.WriteLine($"Interesting Dog Fact: {f}"));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error Occured: {ex.Message}");
+            }
+            Console.ReadKey();
+
+        }
+
+    }
 
     public interface IDogFactsApi
     {

@@ -20,14 +20,15 @@
     <Compile Remove="09-LocalFunctionsVsLambdas.cs" />
     <Compile Remove="11-LocalFunctionAttribute.cs" />
     <Compile Remove="12.1-LocalFunctionFuncMethods.cs" />
+    <Compile Remove="12.2-LocalFunctionGlobalFuncMethods.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="01-LocalFunctions.cs" />
     <None Include="02-LocalFunction.cs" />
     <None Include="03-LocalFunctionsSantitize.cs" />
     <None Include="04.1-LocalFunctionsIteratorNotLocal.cs" />
     <None Include="04.2-LocalFunctionsIterator.cs" />
-    <None Include="01-LocalFunctions.cs" />
     <None Include="05-LocalFunctionsTasks.cs" />
     <None Include="06.1-LocalFunctionsLinq.cs" />
     <None Include="06.2-LocalFunctionsLinqExpressions.cs" />
@@ -36,6 +37,7 @@
     <None Include="09-LocalFunctionsVsLambdas.cs" />
     <None Include="11-LocalFunctionAttribute.cs" />
     <None Include="12.1-LocalFunctionFuncMethods.cs" />
+    <None Include="12.2-LocalFunctionGlobalFuncMethods.cs" />
   </ItemGroup>
 
   <ItemGroup>
