@@ -8,7 +8,7 @@ namespace TestProject1
     public class UnitTest1
     {
         [Fact]
-        public Task BasicUsage()
+        public Task BasicText()
         {
             //Arrange 
             var mock = new Mock<IFoo>();
@@ -24,7 +24,7 @@ namespace TestProject1
             var x1 = processor.Process(number, Operation.doubleVal);
             var x2 = processor.Process(number, Operation.tripleVal);
             var x3 = processor.Process(number, Operation.halveVal);
-            var x4 = processor.Process(number, Operation.specialVal); ;
+            var x4 = processor.Process(number, Operation.specialVal); 
 
             //Assert 
             Assert.Equal(1, x1);

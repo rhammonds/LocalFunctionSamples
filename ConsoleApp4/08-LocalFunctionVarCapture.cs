@@ -8,6 +8,7 @@ namespace LocalFunctionSamples
 {
     class Program
     {
+        static int globalVar = 3;
         public static void Main()
         {
             Console.WriteLine(Process(3));
@@ -15,11 +16,11 @@ namespace LocalFunctionSamples
         }
         static int Process (int input)
         {
-            int output;
+            int output; //must be declared before local methods
             process();
             return output;
 
-            void process() => output = 100 * input + input;
+            void process() => output = 100 * input + input + globalVar;
         }
     }
 }

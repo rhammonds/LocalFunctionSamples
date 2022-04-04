@@ -16,11 +16,11 @@
     <Compile Remove="06.1-LocalFunctionsLinq.cs" />
     <Compile Remove="06.2-LocalFunctionsLinqExpressions.cs" />
     <Compile Remove="07-LocalFunctionsRecursion.cs" />
-    <Compile Remove="08-LocalFunctionVarCapture.cs" />
     <Compile Remove="09-LocalFunctionsVsLambdas.cs" />
     <Compile Remove="11-LocalFunctionAttribute.cs" />
     <Compile Remove="12.1-LocalFunctionFuncMethods.cs" />
     <Compile Remove="12.2-LocalFunctionGlobalFuncMethods.cs" />
+    <Compile Remove="13-LocalFunctionsReadability.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,11 +33,11 @@
     <None Include="06.1-LocalFunctionsLinq.cs" />
     <None Include="06.2-LocalFunctionsLinqExpressions.cs" />
     <None Include="07-LocalFunctionsRecursion.cs" />
-    <None Include="08-LocalFunctionVarCapture.cs" />
     <None Include="09-LocalFunctionsVsLambdas.cs" />
     <None Include="11-LocalFunctionAttribute.cs" />
     <None Include="12.1-LocalFunctionFuncMethods.cs" />
     <None Include="12.2-LocalFunctionGlobalFuncMethods.cs" />
+    <None Include="13-LocalFunctionsReadability.cs" />
   </ItemGroup>
 
   <ItemGroup>
