@@ -14,11 +14,12 @@ namespace LocalFunctionSamples
     {
         static void Main(string[] args)
         {
-            var task = Process();
+            var task = ProcessHasLocal();
             task.Wait();
+            Console.ReadKey();
         }
 
-        static async Task Process()
+        static async Task ProcessHasLocal()
         {
             try
             {
@@ -30,7 +31,6 @@ namespace LocalFunctionSamples
             {
                 Console.WriteLine($"Error Occured: {ex.Message}");
             }
-            Console.ReadKey();
 
             IDogFactsApi getDogService()
             {
@@ -55,7 +55,6 @@ namespace LocalFunctionSamples
         {
             try
             {
-                //Setup
                 var host = (
                     new HostBuilder()
                         .ConfigureServices((hostContext, services) =>
@@ -67,8 +66,6 @@ namespace LocalFunctionSamples
                 using var serviceScope = host.Services.CreateScope();
                 var services = serviceScope.ServiceProvider;
                 var service = services.GetRequiredService<IDogFactsApi>();
-
-                //Call
                 var result = await service.GetDogFacts(1);
                 var dog = JsonConvert.DeserializeObject<Dog>(result); ;
                 dog.Facts.ForEach(f => Console.WriteLine($"Interesting Dog Fact: {f}"));
@@ -77,8 +74,6 @@ namespace LocalFunctionSamples
             {
                 Console.WriteLine($"Error Occured: {ex.Message}");
             }
-            Console.ReadKey();
-
         }
 
     }

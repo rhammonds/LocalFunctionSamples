@@ -11,30 +11,30 @@ namespace LocalFunctionSamples
         public static void Main()
         {
             //local variables;
-            Func<int, int> square1;
-            Func<int, int> square3 = x => x * x; //set using expression body
+            Func<int, int> squareDelegate;
+            Func<int, int> squareDelegate2 = x => x * x; //set using expression body
 
             //local methods
-            int square2(int x) => x * x;
-            Func<int, int> square4()
+            int squareLocalF(int x) => x * x;
+            Func<int, int> squareReturnDelegate()
             {
                 static int square(int x) => x * x;
                 return square;
             }
 
             // 1. lambda delegate
-            square1 = x => x * x;
-            Console.WriteLine("Square is {0}", square1(2));
+            squareDelegate = x => x * x;
+            Console.WriteLine("Square is {0}", squareDelegate(2));
 
-            // 2. local method
-            Console.WriteLine("Square is {0}", square2(2));
+            // 2. local function
+            Console.WriteLine("Square is {0}", squareLocalF(2));
 
-            // 3. local function that return lambda delegate
-            Console.WriteLine("Square is {0}", square4()(2));
+            // 3. local function that returns lambda delegate
+            Console.WriteLine("Square is {0}", squareReturnDelegate()(2));
 
             // 4. set lambda delegate to local method delegate
-            square1 = square4();
-            Console.WriteLine("Square is {0}", square1(2));
+            squareDelegate = squareReturnDelegate();
+            Console.WriteLine("Square is {0}", squareDelegate(2));
            
             Console.Read();
         }

@@ -9,7 +9,7 @@ namespace LocalFunctionSamples
     {
         static void Main(string[] args)
         {
-            NumberProcessor processor = new(); //new operator
+            NumberProcessor processor = new();
             processor.PrintCalculations(3,4);
             Console.ReadLine();
         }
