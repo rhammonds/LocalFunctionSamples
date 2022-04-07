@@ -15,6 +15,7 @@ namespace LocalFunctionSamples
                 var oddNumbers = GetOddNumbersUseLocalFunction(50, 100);
                 oddNumbers.ToList().ForEach(i => Console.Write($"{i}, "));
                 Console.WriteLine();
+
                 var oddNumbers2 = GetOddNumbersUseLocalFunctionPrintErrors(50, 100);
                 oddNumbers2.ToList().ForEach(i => Console.Write($"{i}, "));
             }
@@ -49,7 +50,7 @@ namespace LocalFunctionSamples
         //Local function throw
         public static IEnumerable<int> GetOddNumbersUseLocalFunction(int start, int end)
         {
-            Validate();
+            validate();
            
             for (int i = start; i <= end; i++)
             {
@@ -57,7 +58,7 @@ namespace LocalFunctionSamples
                     yield return i;
             }
 
-            void Validate()
+            void validate()
             {
                 if (start < 0 || start > 99)
                     throw new ArgumentOutOfRangeException(nameof(start), "start must be between 0 and 99.");
@@ -72,7 +73,7 @@ namespace LocalFunctionSamples
         public static IEnumerable<int> GetOddNumbersUseLocalFunctionPrintErrors(int start, int end)
         {
             List<string> errors = new();
-            Validate();
+            validate();
             if (errors.Count > 0)
             {
                 errors.ForEach(i => Console.WriteLine($"Error: {i}"));
@@ -90,7 +91,7 @@ namespace LocalFunctionSamples
                 }
             }
 
-            void Validate()
+            void validate()
             {
                 if (start < 0 || start > 99)
                     errors.Add("start must be between 0 and 99.");

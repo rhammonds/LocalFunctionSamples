@@ -36,9 +36,9 @@ namespace LocalFunctionSamples
             if (start >= end)
                 throw new ArgumentException("start must be less than end.");
 
-            return GetOddSequenceEnumerator();
+            return getOddSequenceEnumerator();
 
-            IEnumerable<int> GetOddSequenceEnumerator()
+            IEnumerable<int> getOddSequenceEnumerator()
             {
                 for (int i = start; i <= end; i++)
                 {

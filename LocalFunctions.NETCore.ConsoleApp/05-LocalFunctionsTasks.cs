@@ -12,8 +12,9 @@ class Program
         string result = null;
 
         Console.WriteLine("Calling task CombineText()");
-        task = CombineText(null, null);
+        task = CombineTextNotLocal(null, null);
         Console.WriteLine("Awaiting Task");
+
         try
         {
             result = await task; //## Errors on task
@@ -51,7 +52,7 @@ class Program
 
     }
     
-    public static async Task<string> CombineText(string a, string b)
+    public static async Task<string> CombineTextNotLocal(string a, string b)
     {
         if (string.IsNullOrEmpty(a)) throw new ArgumentNullException(nameof(a));
         if (string.IsNullOrEmpty(b)) throw new ArgumentNullException(nameof(b));
@@ -70,9 +71,9 @@ class Program
         if (string.IsNullOrEmpty(a)) throw new ArgumentNullException(nameof(a));
         if (string.IsNullOrEmpty(b)) throw new ArgumentNullException(nameof(b));
 
-        return GetAllTextAsync();
+        return getAllTextAsync();
 
-        async Task<string> GetAllTextAsync()  //local function with asyn
+        async Task<string> getAllTextAsync()  //local function with asyn
         {
             string result = null;
             await Task.Run(() => result = $"{a} {b}");
