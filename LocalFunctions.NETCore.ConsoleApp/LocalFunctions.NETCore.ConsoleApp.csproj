@@ -8,13 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="01-LocalFunctions.cs" />
-    <Compile Remove="02-LocalFunction.cs" />
     <Compile Remove="03-LocalFunctionsSantitize.cs" />
     <Compile Remove="04.1-LocalFunctionsIteratorNotLocal.cs" />
     <Compile Remove="04.2-LocalFunctionsIterator.cs" />
     <Compile Remove="05-LocalFunctionsTasks.cs" />
     <Compile Remove="06.1-LocalFunctionsLinq.cs" />
     <Compile Remove="06.2-LocalFunctionsLinqExpressions.cs" />
+    <Compile Remove="07-LocalFunctionsRecursion.cs" />
     <Compile Remove="08-LocalFunctionVarCapture.cs" />
     <Compile Remove="09-LocalFunctionsVsLambdas.cs" />
     <Compile Remove="11-LocalFunctionAttribute.cs" />
@@ -25,13 +25,13 @@
 
   <ItemGroup>
     <None Include="01-LocalFunctions.cs" />
-    <None Include="02-LocalFunction.cs" />
     <None Include="03-LocalFunctionsSantitize.cs" />
     <None Include="04.1-LocalFunctionsIteratorNotLocal.cs" />
     <None Include="04.2-LocalFunctionsIterator.cs" />
     <None Include="05-LocalFunctionsTasks.cs" />
     <None Include="06.1-LocalFunctionsLinq.cs" />
     <None Include="06.2-LocalFunctionsLinqExpressions.cs" />
+    <None Include="07-LocalFunctionsRecursion.cs" />
     <None Include="08-LocalFunctionVarCapture.cs" />
     <None Include="09-LocalFunctionsVsLambdas.cs" />
     <None Include="11-LocalFunctionAttribute.cs" />

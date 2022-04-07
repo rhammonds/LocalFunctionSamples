@@ -23,13 +23,18 @@ namespace LocalFunctionSamples
         {
             try
             {
-                var result = await getDogService().GetDogFacts(1);
+                var result = await getDogFacts(1);               
                 var dog = JsonConvert.DeserializeObject<Dog>(result); ;
                 dog.Facts.ForEach(f => Console.WriteLine($"Interesting Dog Fact: {f}"));
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error Occured: {ex.Message}");
+            }
+
+            async Task<string> getDogFacts(int numberId)
+            {
+                return await getDogService().GetDogFacts(1);
             }
 
             IDogFactsApi getDogService()
